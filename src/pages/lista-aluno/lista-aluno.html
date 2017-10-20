@@ -1,0 +1,30 @@
+
+<ion-header>
+
+  <ion-navbar color="secondary">
+    <ion-title>Lista Alunos</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only 
+      (click)="navigateToAddAlunoPage()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <button ion-button color="white" (click)="logout()">Logout</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+ 
+  <ion-list>
+    <ion-item *ngFor="let aluno of listaAlunoRef$ | async" (click)="selectAluno(aluno)">
+      <h2>Nome: {{aluno.NomeAluno}}</h2>
+      <h3>Matricula: {{aluno.MatriculaAluno}}</h3>
+      <h4>nota1: {{aluno.Nota1}}</h4>
+      <h5>nota2: {{aluno.Nota2}}</h5>
+      <h6>Quantidade de faltas: {{aluno.QuantidadeFalta}}</h6>
+    </ion-item>
+  </ion-list> 
+
+</ion-content>

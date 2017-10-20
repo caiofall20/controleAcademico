@@ -1,0 +1,39 @@
+
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Adicionar Aluno</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+   <ion-label floating>Nome Aluno</ion-label>
+    <ion-input type="text" [(ngModel)]="aluno.NomeAluno"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Matricula Aluno</ion-label>
+       <ion-input type="number" [(ngModel)]="aluno.MatriculaAluno"></ion-input>
+     </ion-item>
+
+     <ion-item>
+        <ion-label floating>Nota1 Aluno</ion-label>
+         <ion-input type="number" [(ngModel)]="aluno.Nota1"></ion-input>
+       </ion-item>
+
+       <ion-item>
+          <ion-label floating>Nota2 Aluno</ion-label>
+           <ion-input type="number" [(ngModel)]="aluno.Nota2"></ion-input>
+         </ion-item>
+
+         <ion-item>
+            <ion-label floating>QuantidadeFaltas Aluno</ion-label>
+             <ion-input type="number" [(ngModel)]="aluno.QuantidadeFalta"></ion-input>
+           </ion-item>
+
+           <button ion-button block (click)="addAluno(aluno)">Add Aluno</button>
+</ion-content>
